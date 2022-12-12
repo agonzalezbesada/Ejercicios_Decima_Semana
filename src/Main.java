@@ -1,6 +1,15 @@
 import java.util.Scanner;
 
+/**
+ * Main, realiza las llamadas
+ * @author Adrián
+ * @version 1.0
+ */
 public class Main {
+    /**
+     * Método principal que realiza las llamadas
+     * @param args
+     */
     public static void main(String[] args) {
         Scanner guardar = new Scanner(System.in);
 
@@ -14,7 +23,7 @@ public class Main {
 
 
         do{
-            System.out.println("\n"+"Que desea hacer"+"\n"+"0. Salir"+"\n"+"1. Introducir vehiculo"+"\n"+"2. Consultar plazas"+"\n"+"3. Localizar por posición"+"\n"+"4. Eliminar por posición"); // Acciones a elegir
+            System.out.println("\n"+"Que desea hacer"+"\n"+"0. Salir"+"\n"+"1. Introducir vehiculo"+"\n"+"2. Consultar todas las plazas"+"\n"+"3. Consultar por posición"+"\n"+"4. Eliminar por posición"); // Acciones a elegir
             menu = guardar.nextInt();
 
             switch (menu){
@@ -35,7 +44,7 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.println("\n"+"Localizando por posición"+"\n"+"Qué posicion desea consultar?");
+                    System.out.println("\n"+"Consultar por posición"+"\n"+"Qué posicion desea consultar?");
                     pos= guardar.nextInt();
                     parking.comprobarPosicion(pos);
                     break;
@@ -54,7 +63,5 @@ public class Main {
             }
 
         } while (menu != 0);
-
     }
-
 }
